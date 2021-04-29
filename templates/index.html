@@ -1,0 +1,54 @@
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+    <h3 style="border: 2px solid white;
+    border-radius: 5px;
+     width: 100%;
+    background-color: black;
+    color: white;
+     text-align: center; 
+     font-size: 50px;
+     font-weight: 500;
+      ">Schedule Management System</h3>
+
+<div class="w3-container">
+    <div class="w3-card-4">
+        <div class="w3-container w3-green">
+          <h2>Enter Meeting Details</h2>
+        </div>
+        <form action="/schedule" method="POST" class="w3-container">
+        
+            <label for="room_date" style="font-size: 30px;
+            font-weight: 700;">Meeting Date:</label>
+            <input type="date" id="room_date" name="room_date" >
+      
+            <label for="time" style="font-size: 30px;
+            font-weight: 700; padding-left: 8%;">Select a time:</label>
+            <input type="time" id="time" name="time"><br>
+
+
+            <label for="rooms" style="font-size: 30px;
+            font-weight: 700;">Choose a Room ID:</label>
+            <select id="rooms" name="rooms">
+                <option value="r1">R1</option>
+                <option value="r2">R2</option>
+                <option value="r3">R3</option>
+                <option value="r4">R4</option>
+                <option value="r5">R5</option>
+            </select>
+
+            <label for="time_period" style="font-size: 30px;
+            font-weight: 700; padding-left: 12%;">Duration of Meeting:</label>
+            <input type="number" id="time_period" name="time_period" min="1">
+            <select id="formate" name="formate">
+                <option value="minutes">minutes</option>
+                <option value="hours">hours</option>
+            </select>
+        <br>
+        <input type="submit" value="Submit" style="background-color: blueviolet; width: 100%; height: 10%;">
+        </form>
+    </div>
+</div>
+</body>
+</html>

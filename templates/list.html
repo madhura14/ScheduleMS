@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+   <body>
+      <h1 style="border: 2px solid white;
+      border-radius: 5px;
+       width: 100%;
+      background-color: blueviolet;
+      color: black;
+       text-align: center; 
+       font-size: 50px;
+       font-weight: 500;
+        ">Scheduled Meetings</h1>
+      <table border = 1 style="border: 1px solid #ddd;
+      text-align: center; border-collapse: collapse;
+  width: 100%; padding: 15px; font-size: 25px; overflow-y: auto; height: 100px;">
+         <thead style="font-weight: bolder; ">
+            <td>Room Date</td>
+            <td>Time</td>
+            <td>Room ID</td>
+            <td>Time Period</td>
+            <td>Formate</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["room_date"]}}</td>
+               <td>{{row["time"]}}</td>
+               <td> {{ row["room"]}}</td>
+               <td>{{row['time_period']}}</td>	
+               <td>{{row['formate']}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+      <h3 style="border: 2px solid white;
+      border-radius: 5px;
+       width: 100%;
+      background-color: blueviolet;
+      color: black;
+       text-align: center; 
+       font-size: 50px;
+       font-weight: 500;"><a href = "/" 
+       style="text-decoration: none; ">Go back to home page</a></h3>
+      
+   </body>
+</html>
